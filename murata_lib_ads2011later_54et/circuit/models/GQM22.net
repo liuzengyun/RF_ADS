@@ -1,0 +1,207 @@
+;;****************************************************************************
+;; File:        GQM22.net
+;; Description: GQM22 model file
+;; Author:      Agilent Technologies Japan, Ltd. 
+;; Created:     2014.07.09 16:46:27
+;; Language:    ADSsim
+;; (C) Copyright 2005, Agilent Technologies Japan, all rights reserved.
+;;****************************************************************************
+
+
+define GQM22 ( _net1  _net2 ) 
+parameters PartNumber=0
+
+DAC:DAC1  File="$muRataLibWeb_CIRCUIT_MODEL_DIR/GQM22.dat" Type="dscr" InterpMode="index_lookup" InterpDom="ri" ExtrapMode="interpMode" iVar1="INDEX" iVal1=PartNumber
+
+
+M01=file{DAC1, "M01"}
+L01=file{DAC1, "L01"}
+K01=file{DAC1, "K01"}
+M02=file{DAC1, "M02"}
+L02=file{DAC1, "L02"}
+K02=file{DAC1, "K02"}
+M03=file{DAC1, "M03"}
+L03=file{DAC1, "L03"}
+K03=file{DAC1, "K03"}
+M04=file{DAC1, "M04"}
+L04=file{DAC1, "L04"}
+K04=file{DAC1, "K04"}
+M05=file{DAC1, "M05"}
+L05=file{DAC1, "L05"}
+K05=file{DAC1, "K05"}
+M06=file{DAC1, "M06"}
+L06=file{DAC1, "L06"}
+K06=file{DAC1, "K06"}
+M07=file{DAC1, "M07"}
+L07=file{DAC1, "L07"}
+K07=file{DAC1, "K07"}
+M08=file{DAC1, "M08"}
+L08=file{DAC1, "L08"}
+K08=file{DAC1, "K08"}
+M09=file{DAC1, "M09"}
+L09=file{DAC1, "L09"}
+K09=file{DAC1, "K09"}
+M10=file{DAC1, "M10"}
+L10=file{DAC1, "L10"}
+K10=file{DAC1, "K10"}
+M11=file{DAC1, "M11"}
+L11=file{DAC1, "L11"}
+K11=file{DAC1, "K11"}
+M12=file{DAC1, "M12"}
+L12=file{DAC1, "L12"}
+K12=file{DAC1, "K12"}
+M13=file{DAC1, "M13"}
+L13=file{DAC1, "L13"}
+K13=file{DAC1, "K13"}
+M14=file{DAC1, "M14"}
+L14=file{DAC1, "L14"}
+K14=file{DAC1, "K14"}
+M15=file{DAC1, "M15"}
+L15=file{DAC1, "L15"}
+K15=file{DAC1, "K15"}
+M16=file{DAC1, "M16"}
+L16=file{DAC1, "L16"}
+K16=file{DAC1, "K16"}
+M17=file{DAC1, "M17"}
+L17=file{DAC1, "L17"}
+K17=file{DAC1, "K17"}
+M18=file{DAC1, "M18"}
+L18=file{DAC1, "L18"}
+K18=file{DAC1, "K18"}
+
+
+Short:DC_Block1 _net1 _net1aux Mode=1
+Z_Port:Z1P01 _net1aux _net0102 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K01)+(1/(j*2*pi*freq*L01))+(1/M01)) endif
+Z_Port:Z1P02 _net0102 _net0203 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K02)+(1/(j*2*pi*freq*L02))+(1/M02)) endif
+Z_Port:Z1P03 _net0203 _net0304 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K03)+(1/(j*2*pi*freq*L03))+(1/M03)) endif
+Z_Port:Z1P04 _net0304 _net0405 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K04)+(1/(j*2*pi*freq*L04))+(1/M04)) endif
+Z_Port:Z1P05 _net0405 _net0506 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K05)+(1/(j*2*pi*freq*L05))+(1/M05)) endif
+Z_Port:Z1P06 _net0506 _net0607 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K06)+(1/(j*2*pi*freq*L06))+(1/M06)) endif
+Z_Port:Z1P07 _net0607 _net0708 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K07)+(1/(j*2*pi*freq*L07))+(1/M07)) endif
+Z_Port:Z1P08 _net0708 _net0809 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K08)+(1/(j*2*pi*freq*L08))+(1/M08)) endif
+Z_Port:Z1P09 _net0809 _net0910 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K09)+(1/(j*2*pi*freq*L09))+(1/M09)) endif
+Z_Port:Z1P10 _net0910 _net1011 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K10)+(1/(j*2*pi*freq*L10))+(1/M10)) endif
+Z_Port:Z1P11 _net1011 _net1112 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K11)+(1/(j*2*pi*freq*L11))+(1/M11)) endif
+Z_Port:Z1P12 _net1112 _net1213 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K12)+(1/(j*2*pi*freq*L12))+(1/M12)) endif
+Z_Port:Z1P13 _net1213 _net1314 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K13)+(1/(j*2*pi*freq*L13))+(1/M13)) endif
+Z_Port:Z1P14 _net1314 _net1415 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K14)+(1/(j*2*pi*freq*L14))+(1/M14)) endif
+Z_Port:Z1P15 _net1415 _net1516 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K15)+(1/(j*2*pi*freq*L15))+(1/M15)) endif
+Z_Port:Z1P16 _net1516 _net1617 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K16)+(1/(j*2*pi*freq*L16))+(1/M16)) endif
+Z_Port:Z1P17 _net1617 _net1718 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K17)+(1/(j*2*pi*freq*L17))+(1/M17)) endif
+Z_Port:Z1P18 _net1718 _net2 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K18)+(1/(j*2*pi*freq*L18))+(1/M18)) endif
+end GQM22
+
+
+;;model information (PartNumber:partName)
+;0 : GQM22M5C2H1R0BB01
+;1 : GQM22M5C2H1R0CB01
+;2 : GQM22M5C2H1R1BB01
+;3 : GQM22M5C2H1R1CB01
+;4 : GQM22M5C2H1R2BB01
+;5 : GQM22M5C2H1R2CB01
+;6 : GQM22M5C2H1R3BB01
+;7 : GQM22M5C2H1R3CB01
+;8 : GQM22M5C2H1R5BB01
+;9 : GQM22M5C2H1R5CB01
+;10 : GQM22M5C2H1R6BB01
+;11 : GQM22M5C2H1R6CB01
+;12 : GQM22M5C2H1R8BB01
+;13 : GQM22M5C2H1R8CB01
+;14 : GQM22M5C2H2R0BB01
+;15 : GQM22M5C2H2R0CB01
+;16 : GQM22M5C2H2R2BB01
+;17 : GQM22M5C2H2R2CB01
+;18 : GQM22M5C2H2R4BB01
+;19 : GQM22M5C2H2R4CB01
+;20 : GQM22M5C2H2R7BB01
+;21 : GQM22M5C2H2R7CB01
+;22 : GQM22M5C2H3R0BB01
+;23 : GQM22M5C2H3R0CB01
+;24 : GQM22M5C2H3R3BB01
+;25 : GQM22M5C2H3R3CB01
+;26 : GQM22M5C2H3R6BB01
+;27 : GQM22M5C2H3R6CB01
+;28 : GQM22M5C2H3R9BB01
+;29 : GQM22M5C2H3R9CB01
+;30 : GQM22M5C2H4R0BB01
+;31 : GQM22M5C2H4R0CB01
+;32 : GQM22M5C2H4R3BB01
+;33 : GQM22M5C2H4R3CB01
+;34 : GQM22M5C2H4R7BB01
+;35 : GQM22M5C2H4R7CB01
+;36 : GQM22M5C2H5R0BB01
+;37 : GQM22M5C2H5R0CB01
+;38 : GQM22M5C2H5R1CB01
+;39 : GQM22M5C2H5R1DB01
+;40 : GQM22M5C2H5R6CB01
+;41 : GQM22M5C2H5R6DB01
+;42 : GQM22M5C2H6R0CB01
+;43 : GQM22M5C2H6R0DB01
+;44 : GQM22M5C2H6R2CB01
+;45 : GQM22M5C2H6R2DB01
+;46 : GQM22M5C2H6R8CB01
+;47 : GQM22M5C2H6R8DB01
+;48 : GQM22M5C2H7R0CB01
+;49 : GQM22M5C2H7R0DB01
+;50 : GQM22M5C2H7R5CB01
+;51 : GQM22M5C2H7R5DB01
+;52 : GQM22M5C2H8R0CB01
+;53 : GQM22M5C2H8R0DB01
+;54 : GQM22M5C2H8R2CB01
+;55 : GQM22M5C2H8R2DB01
+;56 : GQM22M5C2H9R0CB01
+;57 : GQM22M5C2H9R0DB01
+;58 : GQM22M5C2H9R1CB01
+;59 : GQM22M5C2H9R1DB01
+;60 : GQM22M5C2H100GB01
+;61 : GQM22M5C2H100JB01
+;62 : GQM22M5C2H110GB01
+;63 : GQM22M5C2H110JB01
+;64 : GQM22M5C2H120GB01
+;65 : GQM22M5C2H120JB01
+;66 : GQM22M5C2H130GB01
+;67 : GQM22M5C2H130JB01
+;68 : GQM22M5C2H150GB01
+;69 : GQM22M5C2H150JB01
+;70 : GQM22M5C2H160GB01
+;71 : GQM22M5C2H160JB01
+;72 : GQM22M5C2H180GB01
+;73 : GQM22M5C2H180JB01
+;74 : GQM22M5C2H200GB01
+;75 : GQM22M5C2H200JB01
+;76 : GQM22M5C2H220GB01
+;77 : GQM22M5C2H220JB01
+;78 : GQM22M5C2H240GB01
+;79 : GQM22M5C2H240JB01
+;80 : GQM22M5C2H270GB01
+;81 : GQM22M5C2H270JB01
+;82 : GQM22M5C2H300GB01
+;83 : GQM22M5C2H300JB01
+;84 : GQM22M5C2H330GB01
+;85 : GQM22M5C2H330JB01
+;86 : GQM22M5C2H360GB01
+;87 : GQM22M5C2H360JB01
+;88 : GQM22M5C2H390GB01
+;89 : GQM22M5C2H390JB01
+;90 : GQM22M5C2H430GB01
+;91 : GQM22M5C2H430JB01
+;92 : GQM22M5C2H470GB01
+;93 : GQM22M5C2H470JB01
+;94 : GQM22M5C2H510GB01
+;95 : GQM22M5C2H510JB01
+;96 : GQM22M5C2H560GB01
+;97 : GQM22M5C2H560JB01
+;98 : GQM22M5C2H620GB01
+;99 : GQM22M5C2H620JB01
+;100 : GQM22M5C2H680GB01
+;101 : GQM22M5C2H680JB01
+;102 : GQM22M5C2H750GB01
+;103 : GQM22M5C2H750JB01
+;104 : GQM22M5C2H820GB01
+;105 : GQM22M5C2H820JB01
+;106 : GQM22M5C2H910GB01
+;107 : GQM22M5C2H910JB01
+;108 : GQM22M5C2H101GB01
+;109 : GQM22M5C2H101JB01
+
+

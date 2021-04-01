@@ -1,0 +1,11 @@
+
+hpeesofsim (*) 510.shp Jul 22 2019, MINT version 5
+    (64-bit windows built: Mon Jul 22, 2019 22:53:59 +0000)
+
+
+SP SP1[1] <lzytest1_lib:t1-2-1:schematic>   freq=(50 MHz->10 GHz)
+
+
+Resource usage:
+  Total stopwatch time     =     5.02 seconds.
+

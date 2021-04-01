@@ -1,0 +1,188 @@
+;;****************************************************************************
+;; File:        GCM15.net
+;; Description: GCM15 model file
+;; Author:      Agilent Technologies Japan, Ltd. 
+;; Created:     2014.07.09 16:46:27
+;; Language:    ADSsim
+;; (C) Copyright 2005, Agilent Technologies Japan, all rights reserved.
+;;****************************************************************************
+
+
+define GCM15 ( _net1  _net2 ) 
+parameters PartNumber=0
+
+DAC:DAC1  File="$muRataLibWeb_CIRCUIT_MODEL_DIR/GCM15.dat" Type="dscr" InterpMode="index_lookup" InterpDom="ri" ExtrapMode="interpMode" iVar1="INDEX" iVal1=PartNumber
+
+
+M01=file{DAC1, "M01"}
+L01=file{DAC1, "L01"}
+K01=file{DAC1, "K01"}
+M02=file{DAC1, "M02"}
+L02=file{DAC1, "L02"}
+K02=file{DAC1, "K02"}
+M03=file{DAC1, "M03"}
+L03=file{DAC1, "L03"}
+K03=file{DAC1, "K03"}
+M04=file{DAC1, "M04"}
+L04=file{DAC1, "L04"}
+K04=file{DAC1, "K04"}
+M05=file{DAC1, "M05"}
+L05=file{DAC1, "L05"}
+K05=file{DAC1, "K05"}
+M06=file{DAC1, "M06"}
+L06=file{DAC1, "L06"}
+K06=file{DAC1, "K06"}
+M07=file{DAC1, "M07"}
+L07=file{DAC1, "L07"}
+K07=file{DAC1, "K07"}
+M08=file{DAC1, "M08"}
+L08=file{DAC1, "L08"}
+K08=file{DAC1, "K08"}
+M09=file{DAC1, "M09"}
+L09=file{DAC1, "L09"}
+K09=file{DAC1, "K09"}
+M10=file{DAC1, "M10"}
+L10=file{DAC1, "L10"}
+K10=file{DAC1, "K10"}
+M11=file{DAC1, "M11"}
+L11=file{DAC1, "L11"}
+K11=file{DAC1, "K11"}
+M12=file{DAC1, "M12"}
+L12=file{DAC1, "L12"}
+K12=file{DAC1, "K12"}
+M13=file{DAC1, "M13"}
+L13=file{DAC1, "L13"}
+K13=file{DAC1, "K13"}
+M14=file{DAC1, "M14"}
+L14=file{DAC1, "L14"}
+K14=file{DAC1, "K14"}
+M15=file{DAC1, "M15"}
+L15=file{DAC1, "L15"}
+K15=file{DAC1, "K15"}
+M16=file{DAC1, "M16"}
+L16=file{DAC1, "L16"}
+K16=file{DAC1, "K16"}
+M17=file{DAC1, "M17"}
+L17=file{DAC1, "L17"}
+K17=file{DAC1, "K17"}
+M18=file{DAC1, "M18"}
+L18=file{DAC1, "L18"}
+K18=file{DAC1, "K18"}
+
+
+Short:DC_Block1 _net1 _net1aux Mode=1
+Z_Port:Z1P01 _net1aux _net0102 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K01)+(1/(j*2*pi*freq*L01))+(1/M01)) endif
+Z_Port:Z1P02 _net0102 _net0203 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K02)+(1/(j*2*pi*freq*L02))+(1/M02)) endif
+Z_Port:Z1P03 _net0203 _net0304 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K03)+(1/(j*2*pi*freq*L03))+(1/M03)) endif
+Z_Port:Z1P04 _net0304 _net0405 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K04)+(1/(j*2*pi*freq*L04))+(1/M04)) endif
+Z_Port:Z1P05 _net0405 _net0506 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K05)+(1/(j*2*pi*freq*L05))+(1/M05)) endif
+Z_Port:Z1P06 _net0506 _net0607 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K06)+(1/(j*2*pi*freq*L06))+(1/M06)) endif
+Z_Port:Z1P07 _net0607 _net0708 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K07)+(1/(j*2*pi*freq*L07))+(1/M07)) endif
+Z_Port:Z1P08 _net0708 _net0809 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K08)+(1/(j*2*pi*freq*L08))+(1/M08)) endif
+Z_Port:Z1P09 _net0809 _net0910 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K09)+(1/(j*2*pi*freq*L09))+(1/M09)) endif
+Z_Port:Z1P10 _net0910 _net1011 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K10)+(1/(j*2*pi*freq*L10))+(1/M10)) endif
+Z_Port:Z1P11 _net1011 _net1112 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K11)+(1/(j*2*pi*freq*L11))+(1/M11)) endif
+Z_Port:Z1P12 _net1112 _net1213 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K12)+(1/(j*2*pi*freq*L12))+(1/M12)) endif
+Z_Port:Z1P13 _net1213 _net1314 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K13)+(1/(j*2*pi*freq*L13))+(1/M13)) endif
+Z_Port:Z1P14 _net1314 _net1415 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K14)+(1/(j*2*pi*freq*L14))+(1/M14)) endif
+Z_Port:Z1P15 _net1415 _net1516 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K15)+(1/(j*2*pi*freq*L15))+(1/M15)) endif
+Z_Port:Z1P16 _net1516 _net1617 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K16)+(1/(j*2*pi*freq*L16))+(1/M16)) endif
+Z_Port:Z1P17 _net1617 _net1718 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K17)+(1/(j*2*pi*freq*L17))+(1/M17)) endif
+Z_Port:Z1P18 _net1718 _net2 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K18)+(1/(j*2*pi*freq*L18))+(1/M18)) endif
+end GCM15
+
+
+;;model information (PartNumber:partName)
+;0 : GCM1555C1H1R0CA16
+;1 : GCM1555C1H2R0CA16
+;2 : GCM1555C1H3R0CA16
+;3 : GCM1555C1H4R0CA16
+;4 : GCM1555C1H5R0CA16
+;5 : GCM1555C1H6R0DA16
+;6 : GCM1555C1H7R0DA16
+;7 : GCM1555C1H8R0DA16
+;8 : GCM1555C1H9R0DA16
+;9 : GCM1555C1H100JA16
+;10 : GCM1555C1H120JA16
+;11 : GCM1555C1H150JA16
+;12 : GCM1555C1H180JA16
+;13 : GCM1555C1H220JA16
+;14 : GCM1555C1H270JA16
+;15 : GCM1555C1H330JA16
+;16 : GCM1555C1H390JA16
+;17 : GCM1555C1H470JA16
+;18 : GCM1555C1H560JA16
+;19 : GCM1555C1H680JA16
+;20 : GCM1555C1H820JA16
+;21 : GCM1555C1H101JA16
+;22 : GCM1555C1H121JA16
+;23 : GCM1555C1H151JA16
+;24 : GCM1555C1H181JA16
+;25 : GCM1555C1H221JA16
+;26 : GCM155L81H221KA37
+;27 : GCM155L81H221KA01
+;28 : GCM155R71H221KA37
+;29 : GCM155R72A221KA37
+;30 : GCM155R72A221KA01
+;31 : GCM1555C1H271JA16
+;32 : GCM1555C1H331JA16
+;33 : GCM155R71H331KA37
+;34 : GCM155R72A331KA01
+;35 : GCM155R72A331KA37
+;36 : GCM1555C1H391JA16
+;37 : GCM1555C1H471JA16
+;38 : GCM155L81H471KA37
+;39 : GCM155L81H471KA01
+;40 : GCM155R71H471KA37
+;41 : GCM155R72A471KA37
+;42 : GCM155R72A471KA01
+;43 : GCM155R71H681KA37
+;44 : GCM155R72A681KA01
+;45 : GCM155R72A681KA37
+;46 : GCM155L81H102KA37
+;47 : GCM155L81H102KA01
+;48 : GCM155R71H102KA37
+;49 : GCM155R72A102KA37
+;50 : GCM155R72A102KA01
+;51 : GCM155R71H152KA37
+;52 : GCM155R72A152KA01
+;53 : GCM155R72A152KA37
+;54 : GCM155L81H222KA37
+;55 : GCM155L81H222KA01
+;56 : GCM155R71H222KA37
+;57 : GCM155R72A222KA37
+;58 : GCM155R72A222KA01
+;59 : GCM155R71H332KA37
+;60 : GCM155R72A332KA01
+;61 : GCM155R72A332KA37
+;62 : GCM155L81H472KA37
+;63 : GCM155L81H472KA01
+;64 : GCM155R71H472KA37
+;65 : GCM155R72A472KA37
+;66 : GCM155R72A472KA01
+;67 : GCM155R71E682KA37
+;68 : GCM155R71H682KA55
+;69 : GCM155L81E103KA37
+;70 : GCM155L81E103KA01
+;71 : GCM155R71E103KA37
+;72 : GCM155R71H103KA55
+;73 : GCM155R71E153KA55
+;74 : GCM155R71H153KA40
+;75 : GCM155R71H153KA55
+;76 : GCM155L81C223KA37
+;77 : GCM155L81C223KA01
+;78 : GCM155R71E223KA55
+;79 : GCM155R71H223KA55
+;80 : GCM155R71H223KA40
+;81 : GCM155R71E333KA55
+;82 : GCM155R71C333KA37
+;83 : GCM155L81C473KA37
+;84 : GCM155L81C473KA01
+;85 : GCM155R71C473KA37
+;86 : GCM155R71E473KA55
+;87 : GCM155R71C683KA55
+;88 : GCM155R71C104KA55
+;89 : GCM155R71H104KE02
+;90 : GCM155R71H104KE37
+
+

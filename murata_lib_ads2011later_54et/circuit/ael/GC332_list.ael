@@ -1,0 +1,36 @@
+create_constant_form("GC332QD72J223KX01","0:GC332QD72J223KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 630[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GC332QD72J223KX01");
+create_constant_form("GC332DD72J333KX01","1:GC332DD72J333KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 630[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GC332DD72J333KX01");
+create_constant_form("GC332DD72J473KX01","2:GC332DD72J473KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 630[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GC332DD72J473KX01");
+create_constant_form("GC332DD72W683KX01","3:GC332DD72W683KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 68000[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GC332DD72W683KX01");
+create_constant_form("GC332QD72E104KX01","4:GC332QD72E104KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 250[V], 100000[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GC332QD72E104KX01");
+create_constant_form("GC332DD72W104KX01","5:GC332DD72W104KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 100000[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GC332DD72W104KX01");
+create_constant_form("GC332DD72E154KX01","6:GC332DD72E154KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 250[V], 150000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GC332DD72E154KX01");
+
+create_form_set("GC332_list" 
+,"GC332QD72J223KX01"
+,"GC332DD72J333KX01"
+,"GC332DD72J473KX01"
+,"GC332DD72W683KX01"
+,"GC332QD72E104KX01"
+,"GC332DD72W104KX01"
+,"GC332DD72E154KX01"
+);
+
+create_compound_form("GC332_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GC332_list",-1,prm("GC332QD72J223KX01")),
+create_parm("MIN","Minimum",32,"GC332_list",-1,prm("GC332QD72J223KX01")),
+create_parm("MAX","Maximum",32,"GC332_list",-1,prm("GC332DD72E154KX01")));
+
+create_form_set("GC332_list_opt","NULL" 
+,"GC332QD72J223KX01"
+,"GC332DD72J333KX01"
+,"GC332DD72J473KX01"
+,"GC332DD72W683KX01"
+,"GC332QD72E104KX01"
+,"GC332DD72W104KX01"
+,"GC332DD72E154KX01"
+,"GC332_compound"
+);
+
+
+

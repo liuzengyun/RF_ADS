@@ -1,0 +1,5 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+DEFINE lzytest1_lib lzytest1_lib
+ASSIGN lzytest1_lib libMode shared
+INCLUDE $HOME/lzytest1_wrk/murata_lib_ads2011later_54et/lib.defs

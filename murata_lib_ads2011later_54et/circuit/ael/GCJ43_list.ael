@@ -1,0 +1,39 @@
+create_constant_form("GCJ43DR72J333KXJ1","0:GCJ43DR72J333KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GCJ43DR72J333KXJ1");
+create_constant_form("GCJ43DR73A333KXJ1","1:GCJ43DR73A333KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 1000[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GCJ43DR73A333KXJ1");
+create_constant_form("GCJ43DR72J473KXJ1","2:GCJ43DR72J473KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GCJ43DR72J473KXJ1");
+create_constant_form("GCJ43DR73A473KXJ1","3:GCJ43DR73A473KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 1000[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GCJ43DR73A473KXJ1");
+create_constant_form("GCJ43QR72J683KXJ1","4:GCJ43QR72J683KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 68000[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GCJ43QR72J683KXJ1");
+create_constant_form("GCJ43DR72J104KXJ1","5:GCJ43DR72J104KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 100000[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GCJ43DR72J104KXJ1");
+create_constant_form("GCJ43DR72E334KXJ1","6:GCJ43DR72E334KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 330000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GCJ43DR72E334KXJ1");
+create_constant_form("GCJ43DR72E474KXJ1","7:GCJ43DR72E474KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 470000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GCJ43DR72E474KXJ1");
+
+create_form_set("GCJ43_list" 
+,"GCJ43DR72J333KXJ1"
+,"GCJ43DR73A333KXJ1"
+,"GCJ43DR72J473KXJ1"
+,"GCJ43DR73A473KXJ1"
+,"GCJ43QR72J683KXJ1"
+,"GCJ43DR72J104KXJ1"
+,"GCJ43DR72E334KXJ1"
+,"GCJ43DR72E474KXJ1"
+);
+
+create_compound_form("GCJ43_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GCJ43_list",-1,prm("GCJ43DR72J333KXJ1")),
+create_parm("MIN","Minimum",32,"GCJ43_list",-1,prm("GCJ43DR72J333KXJ1")),
+create_parm("MAX","Maximum",32,"GCJ43_list",-1,prm("GCJ43DR72E474KXJ1")));
+
+create_form_set("GCJ43_list_opt","NULL" 
+,"GCJ43DR72J333KXJ1"
+,"GCJ43DR73A333KXJ1"
+,"GCJ43DR72J473KXJ1"
+,"GCJ43DR73A473KXJ1"
+,"GCJ43QR72J683KXJ1"
+,"GCJ43DR72J104KXJ1"
+,"GCJ43DR72E334KXJ1"
+,"GCJ43DR72E474KXJ1"
+,"GCJ43_compound"
+);
+
+
+

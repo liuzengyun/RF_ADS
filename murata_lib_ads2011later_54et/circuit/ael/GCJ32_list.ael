@@ -1,0 +1,51 @@
+create_constant_form("GCJ32QR72J682KXJ1","0:GCJ32QR72J682KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 6800[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GCJ32QR72J682KXJ1");
+create_constant_form("GCJ32QR72J103KXJ1","1:GCJ32QR72J103KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GCJ32QR72J103KXJ1");
+create_constant_form("GCJ32DR72J153KXJ1","2:GCJ32DR72J153KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GCJ32DR72J153KXJ1");
+create_constant_form("GCJ32DR73A153KXJ1","3:GCJ32DR73A153KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 1000[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GCJ32DR73A153KXJ1");
+create_constant_form("GCJ32DR72J223KXJ1","4:GCJ32DR72J223KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GCJ32DR72J223KXJ1");
+create_constant_form("GCJ32DR73A223KXJ1","5:GCJ32DR73A223KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 1000[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GCJ32DR73A223KXJ1");
+create_constant_form("GCJ32DR72J333KXJ1","6:GCJ32DR72J333KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GCJ32DR72J333KXJ1");
+create_constant_form("GCJ32DR72J473KXJ1","7:GCJ32DR72J473KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 630[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GCJ32DR72J473KXJ1");
+create_constant_form("GCJ32QR72E683KXJ1","8:GCJ32QR72E683KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 68000[pF], +/-10[%], 100[kHz]-3[GHz]:8",68,"8","GCJ32QR72E683KXJ1");
+create_constant_form("GCJ32DR72E104KXJ1","9:GCJ32DR72E104KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 100000[pF], +/-10[%], 100[kHz]-3[GHz]:9",68,"9","GCJ32DR72E104KXJ1");
+create_constant_form("GCJ32QR72E154KXJ1","10:GCJ32QR72E154KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 150000[pF], +/-10[%], 100[kHz]-3[GHz]:10",68,"10","GCJ32QR72E154KXJ1");
+create_constant_form("GCJ32DR72E224KXJ1","11:GCJ32DR72E224KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 220000[pF], +/-10[%], 100[kHz]-3[GHz]:11",68,"11","GCJ32DR72E224KXJ1");
+
+create_form_set("GCJ32_list" 
+,"GCJ32QR72J682KXJ1"
+,"GCJ32QR72J103KXJ1"
+,"GCJ32DR72J153KXJ1"
+,"GCJ32DR73A153KXJ1"
+,"GCJ32DR72J223KXJ1"
+,"GCJ32DR73A223KXJ1"
+,"GCJ32DR72J333KXJ1"
+,"GCJ32DR72J473KXJ1"
+,"GCJ32QR72E683KXJ1"
+,"GCJ32DR72E104KXJ1"
+,"GCJ32QR72E154KXJ1"
+,"GCJ32DR72E224KXJ1"
+);
+
+create_compound_form("GCJ32_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GCJ32_list",-1,prm("GCJ32QR72J682KXJ1")),
+create_parm("MIN","Minimum",32,"GCJ32_list",-1,prm("GCJ32QR72J682KXJ1")),
+create_parm("MAX","Maximum",32,"GCJ32_list",-1,prm("GCJ32DR72E224KXJ1")));
+
+create_form_set("GCJ32_list_opt","NULL" 
+,"GCJ32QR72J682KXJ1"
+,"GCJ32QR72J103KXJ1"
+,"GCJ32DR72J153KXJ1"
+,"GCJ32DR73A153KXJ1"
+,"GCJ32DR72J223KXJ1"
+,"GCJ32DR73A223KXJ1"
+,"GCJ32DR72J333KXJ1"
+,"GCJ32DR72J473KXJ1"
+,"GCJ32QR72E683KXJ1"
+,"GCJ32DR72E104KXJ1"
+,"GCJ32QR72E154KXJ1"
+,"GCJ32DR72E224KXJ1"
+,"GCJ32_compound"
+);
+
+
+

@@ -1,0 +1,254 @@
+;;****************************************************************************
+;; File:        LQP02TN.net
+;; Description: LQP02TN model file
+;; Author:      Agilent Technologies Japan, Ltd. 
+;; Created:     2014.07.09 16:46:27
+;; Language:    ADSsim
+;; (C) Copyright 2005, Agilent Technologies Japan, all rights reserved.
+;;****************************************************************************
+
+
+define LQP02TN ( _net1  _net2 )
+parameters PartNumber=0
+DAC:DAC1  File="$muRataLibWeb_CIRCUIT_MODEL_DIR/LQP02TN.dat" Type="dscr" InterpMode="index_lookup" InterpDom="ri" ExtrapMode="interpMode" iVar1="INDEX" iVal1=PartNumber
+
+
+M01=file{DAC1, "M01"}
+L01=file{DAC1, "L01"}
+K01=file{DAC1, "K01"}
+M02=file{DAC1, "M02"}
+L02=file{DAC1, "L02"}
+K02=file{DAC1, "K02"}
+M03=file{DAC1, "M03"}
+L03=file{DAC1, "L03"}
+K03=file{DAC1, "K03"}
+M04=file{DAC1, "M04"}
+L04=file{DAC1, "L04"}
+K04=file{DAC1, "K04"}
+M05=file{DAC1, "M05"}
+L05=file{DAC1, "L05"}
+K05=file{DAC1, "K05"}
+M06=file{DAC1, "M06"}
+L06=file{DAC1, "L06"}
+K06=file{DAC1, "K06"}
+M07=file{DAC1, "M07"}
+L07=file{DAC1, "L07"}
+K07=file{DAC1, "K07"}
+M08=file{DAC1, "M08"}
+L08=file{DAC1, "L08"}
+K08=file{DAC1, "K08"}
+M09=file{DAC1, "M09"}
+L09=file{DAC1, "L09"}
+K09=file{DAC1, "K09"}
+M10=file{DAC1, "M10"}
+L10=file{DAC1, "L10"}
+K10=file{DAC1, "K10"}
+M11=file{DAC1, "M11"}
+L11=file{DAC1, "L11"}
+K11=file{DAC1, "K11"}
+M12=file{DAC1, "M12"}
+L12=file{DAC1, "L12"}
+K12=file{DAC1, "K12"}
+M13=file{DAC1, "M13"}
+L13=file{DAC1, "L13"}
+K13=file{DAC1, "K13"}
+M14=file{DAC1, "M14"}
+L14=file{DAC1, "L14"}
+K14=file{DAC1, "K14"}
+M15=file{DAC1, "M15"}
+L15=file{DAC1, "L15"}
+K15=file{DAC1, "K15"}
+M16=file{DAC1, "M16"}
+L16=file{DAC1, "L16"}
+K16=file{DAC1, "K16"}
+
+
+Z_Port:Z1P01  _net1 _net2 Z[1,1]=if freq==0 or K01==0 then (j*2*pi*freq*L01)+M01 else 1/(j*2*pi*freq*K01)+(j*2*pi*freq*L01)+M01 endif
+Z_Port:Z1P02  _net1 _net2 Z[1,1]=if freq==0 or K02==0 then (j*2*pi*freq*L02)+M02 else 1/(j*2*pi*freq*K02)+(j*2*pi*freq*L02)+M02 endif
+Z_Port:Z1P03  _net1 _net2 Z[1,1]=if freq==0 or K03==0 then (j*2*pi*freq*L03)+M03 else 1/(j*2*pi*freq*K03)+(j*2*pi*freq*L03)+M03 endif
+Z_Port:Z1P04  _net1 _net2 Z[1,1]=if freq==0 or K04==0 then (j*2*pi*freq*L04)+M04 else 1/(j*2*pi*freq*K04)+(j*2*pi*freq*L04)+M04 endif
+Z_Port:Z1P05  _net1 _net2 Z[1,1]=if freq==0 or K05==0 then (j*2*pi*freq*L05)+M05 else 1/(j*2*pi*freq*K05)+(j*2*pi*freq*L05)+M05 endif
+Z_Port:Z1P06  _net1 _net2 Z[1,1]=if freq==0 or K06==0 then (j*2*pi*freq*L06)+M06 else 1/(j*2*pi*freq*K06)+(j*2*pi*freq*L06)+M06 endif
+Z_Port:Z1P07  _net1 _net2 Z[1,1]=if freq==0 or K07==0 then (j*2*pi*freq*L07)+M07 else 1/(j*2*pi*freq*K07)+(j*2*pi*freq*L07)+M07 endif
+Z_Port:Z1P08  _net1 _net2 Z[1,1]=if freq==0 or K08==0 then (j*2*pi*freq*L08)+M08 else 1/(j*2*pi*freq*K08)+(j*2*pi*freq*L08)+M08 endif
+Z_Port:Z1P09  _net1 _net2 Z[1,1]=if freq==0 or K09==0 then (j*2*pi*freq*L09)+M09 else 1/(j*2*pi*freq*K09)+(j*2*pi*freq*L09)+M09 endif
+Z_Port:Z1P10  _net1 _net2 Z[1,1]=if freq==0 or K10==0 then (j*2*pi*freq*L10)+M10 else 1/(j*2*pi*freq*K10)+(j*2*pi*freq*L10)+M10 endif
+Z_Port:Z1P11  _net1 _net2 Z[1,1]=if freq==0 or K11==0 then (j*2*pi*freq*L11)+M11 else 1/(j*2*pi*freq*K11)+(j*2*pi*freq*L11)+M11 endif
+Z_Port:Z1P12  _net1 _net2 Z[1,1]=if freq==0 or K12==0 then (j*2*pi*freq*L12)+M12 else 1/(j*2*pi*freq*K12)+(j*2*pi*freq*L12)+M12 endif
+Z_Port:Z1P13  _net1 _net2 Z[1,1]=if freq==0 or K13==0 then (j*2*pi*freq*L13)+M13 else 1/(j*2*pi*freq*K13)+(j*2*pi*freq*L13)+M13 endif
+Z_Port:Z1P14  _net1 _net2 Z[1,1]=if freq==0 or K14==0 then (j*2*pi*freq*L14)+M14 else 1/(j*2*pi*freq*K14)+(j*2*pi*freq*L14)+M14 endif
+Z_Port:Z1P15  _net1 _net2 Z[1,1]=if freq==0 or K15==0 then (j*2*pi*freq*L15)+M15 else 1/(j*2*pi*freq*K15)+(j*2*pi*freq*L15)+M15 endif
+Z_Port:Z1P16  _net1 _net2 Z[1,1]=if freq==0 or K16==0 then (j*2*pi*freq*L16)+M16 else 1/(j*2*pi*freq*K16)+(j*2*pi*freq*L16)+M16 endif
+
+
+end LQP02TN
+;;model information (PartNumber:partName)
+;0 : LQP02TN0N2B02
+;1 : LQP02TN0N2C02
+;2 : LQP02TN0N3B02
+;3 : LQP02TN0N3C02
+;4 : LQP02TN0N4B02
+;5 : LQP02TN0N4C02
+;6 : LQP02TN0N4S02
+;7 : LQP02TN0N5B02
+;8 : LQP02TN0N5C02
+;9 : LQP02TN0N5S02
+;10 : LQP02TN0N6B02
+;11 : LQP02TN0N6C02
+;12 : LQP02TN0N6S02
+;13 : LQP02TN0N7B02
+;14 : LQP02TN0N7C02
+;15 : LQP02TN0N7S02
+;16 : LQP02TN0N8B02
+;17 : LQP02TN0N8C02
+;18 : LQP02TN0N8S02
+;19 : LQP02TN0N9B02
+;20 : LQP02TN0N9C02
+;21 : LQP02TN0N9S02
+;22 : LQP02TN1N0B02
+;23 : LQP02TN1N0C02
+;24 : LQP02TN1N0S02
+;25 : LQP02TN1N1B02
+;26 : LQP02TN1N1C02
+;27 : LQP02TN1N1S02
+;28 : LQP02TN1N2B02
+;29 : LQP02TN1N2C02
+;30 : LQP02TN1N2S02
+;31 : LQP02TN1N3B02
+;32 : LQP02TN1N3C02
+;33 : LQP02TN1N3S02
+;34 : LQP02TN1N4B02
+;35 : LQP02TN1N4C02
+;36 : LQP02TN1N4S02
+;37 : LQP02TN1N5B02
+;38 : LQP02TN1N5C02
+;39 : LQP02TN1N5S02
+;40 : LQP02TN1N6B02
+;41 : LQP02TN1N6C02
+;42 : LQP02TN1N6S02
+;43 : LQP02TN1N7B02
+;44 : LQP02TN1N7C02
+;45 : LQP02TN1N7S02
+;46 : LQP02TN1N8B02
+;47 : LQP02TN1N8C02
+;48 : LQP02TN1N8S02
+;49 : LQP02TN1N9B02
+;50 : LQP02TN1N9C02
+;51 : LQP02TN1N9S02
+;52 : LQP02TN2N0B02
+;53 : LQP02TN2N0C02
+;54 : LQP02TN2N0S02
+;55 : LQP02TN2N1B02
+;56 : LQP02TN2N1C02
+;57 : LQP02TN2N1S02
+;58 : LQP02TN2N2B02
+;59 : LQP02TN2N2C02
+;60 : LQP02TN2N2S02
+;61 : LQP02TN2N3B02
+;62 : LQP02TN2N3C02
+;63 : LQP02TN2N3S02
+;64 : LQP02TN2N4B02
+;65 : LQP02TN2N4C02
+;66 : LQP02TN2N4S02
+;67 : LQP02TN2N5B02
+;68 : LQP02TN2N5C02
+;69 : LQP02TN2N5S02
+;70 : LQP02TN2N6B02
+;71 : LQP02TN2N6C02
+;72 : LQP02TN2N6S02
+;73 : LQP02TN2N7B02
+;74 : LQP02TN2N7C02
+;75 : LQP02TN2N7S02
+;76 : LQP02TN2N8B02
+;77 : LQP02TN2N8C02
+;78 : LQP02TN2N8S02
+;79 : LQP02TN2N9B02
+;80 : LQP02TN2N9C02
+;81 : LQP02TN2N9S02
+;82 : LQP02TN3N0B02
+;83 : LQP02TN3N0C02
+;84 : LQP02TN3N0S02
+;85 : LQP02TN3N1B02
+;86 : LQP02TN3N1C02
+;87 : LQP02TN3N1S02
+;88 : LQP02TN3N2B02
+;89 : LQP02TN3N2C02
+;90 : LQP02TN3N2S02
+;91 : LQP02TN3N3B02
+;92 : LQP02TN3N3C02
+;93 : LQP02TN3N3S02
+;94 : LQP02TN3N4B02
+;95 : LQP02TN3N4C02
+;96 : LQP02TN3N4S02
+;97 : LQP02TN3N5B02
+;98 : LQP02TN3N5C02
+;99 : LQP02TN3N5S02
+;100 : LQP02TN3N6B02
+;101 : LQP02TN3N6C02
+;102 : LQP02TN3N6S02
+;103 : LQP02TN3N7B02
+;104 : LQP02TN3N7C02
+;105 : LQP02TN3N7S02
+;106 : LQP02TN3N8B02
+;107 : LQP02TN3N8C02
+;108 : LQP02TN3N8S02
+;109 : LQP02TN3N9B02
+;110 : LQP02TN3N9C02
+;111 : LQP02TN3N9S02
+;112 : LQP02TN4N0B02
+;113 : LQP02TN4N0C02
+;114 : LQP02TN4N0S02
+;115 : LQP02TN4N1B02
+;116 : LQP02TN4N1C02
+;117 : LQP02TN4N1S02
+;118 : LQP02TN4N2B02
+;119 : LQP02TN4N2C02
+;120 : LQP02TN4N2S02
+;121 : LQP02TN4N3H02
+;122 : LQP02TN4N3J02
+;123 : LQP02TN4N3S02
+;124 : LQP02TN4N7H02
+;125 : LQP02TN4N7J02
+;126 : LQP02TN4N7S02
+;127 : LQP02TN5N1H02
+;128 : LQP02TN5N1J02
+;129 : LQP02TN5N1S02
+;130 : LQP02TN5N6H02
+;131 : LQP02TN5N6J02
+;132 : LQP02TN5N6S02
+;133 : LQP02TN6N2H02
+;134 : LQP02TN6N2J02
+;135 : LQP02TN6N8H02
+;136 : LQP02TN6N8J02
+;137 : LQP02TN7N5H02
+;138 : LQP02TN7N5J02
+;139 : LQP02TN8N2H02
+;140 : LQP02TN8N2J02
+;141 : LQP02TN9N1H02
+;142 : LQP02TN9N1J02
+;143 : LQP02TN10NH02
+;144 : LQP02TN10NJ02
+;145 : LQP02TN11NH02
+;146 : LQP02TN11NJ02
+;147 : LQP02TN12NH02
+;148 : LQP02TN12NJ02
+;149 : LQP02TN13NH02
+;150 : LQP02TN13NJ02
+;151 : LQP02TN15NH02
+;152 : LQP02TN15NJ02
+;153 : LQP02TN16NH02
+;154 : LQP02TN16NJ02
+;155 : LQP02TN18NH02
+;156 : LQP02TN18NJ02
+;157 : LQP02TN20NH02
+;158 : LQP02TN20NJ02
+;159 : LQP02TN22NH02
+;160 : LQP02TN22NJ02
+;161 : LQP02TN27NH02
+;162 : LQP02TN27NJ02
+;163 : LQP02TN33NH02
+;164 : LQP02TN33NJ02
+;165 : LQP02TN39NH02
+;166 : LQP02TN39NJ02
+
+

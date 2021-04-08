@@ -1,4 +1,4 @@
-<ADSWorkspace Revision="18" Version="100">
+<ADSWorkspace Revision="27" Version="100">
     <Workspace Name="">
         <LibraryDefs Name="lib.defs" />
         <ConfigFile Name="de_sim.cfg" />
@@ -91,6 +91,27 @@
             <Cell Name="lzytest1_lib:t1-2-2" />
             <Data_Display Name="t1-2-2.dds" />
         </Folder>
-        <Folder Name="test2" />
+        <Folder Name="test2">
+            <Cell Name="lzytest1_lib:m2-1" />
+            <Data_Display Name="m2-1.dds" />
+            <Cell Name="lzytest1_lib:m2-2" />
+            <Data_Display Name="m2-2.dds" />
+            <Cell Name="lzytest1_lib:t2-1-1" />
+            <Data_Display Name="t2-1-1.dds" />
+        </Folder>
+        <Folder Name="000 每次实验在一个文件夹，m开头代表老师讲的示例，t开头对应每次实验内容" />
+        <Dataset Name="m2_1.ds" />
+        <Data_Files Name="m2_1.ds" />
+        <Data_Files Name="m2_1_data\logFile.txt" />
+        <Dataset Name="m2_2.ds" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_m2#2d2_schematic\annotation_1.xml" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_m2#2d2_schematic\annotation_map.xml" />
+        <Data_Files Name="m2_2.ds" />
+        <Data_Files Name="m2_2_data\logFile.txt" />
+        <Dataset Name="t2_1_1.ds" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d1#2d1_schematic\annotation_1.xml" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d1#2d1_schematic\annotation_map.xml" />
+        <Data_Files Name="t2_1_1.ds" />
+        <Data_Files Name="t2_1_1_data\logFile.txt" />
     </Workspace>
 </ADSWorkspace>

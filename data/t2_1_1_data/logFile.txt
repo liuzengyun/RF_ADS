@@ -1,0 +1,15 @@
+
+hpeesofsim (*) 510.shp Jul 22 2019, MINT version 5
+    (64-bit windows built: Mon Jul 22, 2019 22:53:59 +0000)
+
+Pt DC convergence is used.
+
+.
+
+
+TRAN Tran1[1] <lzytest1_lib:t2-1-1:schematic>   time=(0 s->4 ns)
+
+
+Resource usage:
+  Total stopwatch time     =     0.55 seconds.
+

@@ -1,16 +1,14 @@
-; Top Design: "lzytest1_lib:t1-1:schematic"
+; Top Design: "lzytest1_lib:t2-3:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="lzytest1_lib:t1-1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-Port:Term1  N__4 0 Num=1 Z=50 Ohm Noise=yes 
-C:C1  N__4 0 C=1.0 pF 
-L:L1  N__4 N__9 L=1.0 nH Noise=yes  
-C:C2  N__9 0 C=1.0 pF 
-R:R1  N__9 0 R=50 Ohm Noise=yes 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="lzytest1_lib:t2-3:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+Port:Term1  N__1 0 Num=1 Z=50 Ohm Noise=yes 
+TLIN:TL1  N__1 N__3 Z=223.60679775 Ohm E=90 F=2 GHz 
+R:R1  N__3 0 R=1000 Ohm Noise=yes 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=yes GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
 SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
 
-SweepPlan: SP1_stim Start=1.0 GHz Stop=10.0 GHz Step=0.5 GHz 
+SweepPlan: SP1_stim Start=0 GHz Stop=6 GHz Step=100 MHz 
 
 OutputPlan:SP1_Output \
       Type="Output" \

@@ -1,5 +1,10 @@
 <!DOCTYPE SaveWorkspaceState>
 <SaveWorkspaceState>
-    <Windows/>
+    <Windows>
+        <Schematic lib="lzytest1_lib" y1="143" geom="1,0,1,190,143,1195,715,1920,1080" cell="t2-3" view="schematic" width="1195" x1="190" height="715"/>
+        <Schematic lib="lzytest1_lib" y1="206" geom="1,0,1,338,206,1195,715,1920,1080" cell="t2-4" view="schematic" width="1195" x1="338" height="715"/>
+        <DDS name="t2-4.dds"/>
+        <DDS name="t2-3.dds"/>
+    </Windows>
     <MainWindowTab tab="1"/>
 </SaveWorkspaceState>

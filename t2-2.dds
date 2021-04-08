@@ -154,8 +154,8 @@ traceID = get_new(goId0, "Trace", "S(1,1)", "X Axis", "Y Axis");
 	}
 // Rect trace:
 	if (traceID != NULL) {
-		set(traceID, "LineThick", 7);
-		set(traceID, "LineType", ddsSolidLineType);
+		set(traceID, "LineThick", 28);
+		set(traceID, "LineType", ddsDotDotLineType);
 		set(traceID, "FillPattern", -1);
 		set(traceID, "SymbolType", ddsCircleSymbol);
 		set(traceID, "SymbolsOnOff", FALSE);
@@ -197,7 +197,7 @@ traceID = get_new(goId0, "Trace", "S(2,2)", "X Axis", "Y Axis");
 	}
 // Rect trace:
 	if (traceID != NULL) {
-		set(traceID, "LineThick", 7);
+		set(traceID, "LineThick", 28);
 		set(traceID, "LineType", ddsSolidLineType);
 		set(traceID, "FillPattern", -1);
 		set(traceID, "SymbolType", ddsCircleSymbol);
@@ -240,8 +240,8 @@ traceID = get_new(goId0, "Trace", "S(3,3)", "X Axis", "Y Axis");
 	}
 // Rect trace:
 	if (traceID != NULL) {
-		set(traceID, "LineThick", 7);
-		set(traceID, "LineType", ddsSolidLineType);
+		set(traceID, "LineThick", 28);
+		set(traceID, "LineType", ddsShortDashLineType);
 		set(traceID, "FillPattern", -1);
 		set(traceID, "SymbolType", ddsCircleSymbol);
 		set(traceID, "SymbolsOnOff", FALSE);
@@ -268,6 +268,15 @@ traceID = get_new(goId0, "Trace", "S(3,3)", "X Axis", "Y Axis");
 			set(traceID, "DensitySymbolType", ddsDotSymbol);
 		}
 	}
+decl legendID;
+legendID = get_new(goId0, "Legend", -705, 3125);
+// Legend
+	if(legendID != NULL) {
+		set(legendID, "Font", "Arial For CAE");
+		set(legendID, "FontSize", 167);
+		set(legendID, "LegendIndentableOnOff", TRUE);
+		set(legendID, "Uid", 8126591);
+	}
 	set(goId0, "PlotLogoHideOnOff", FALSE);
 // Initialize plot
 	set(goId0, "InitPlot", 0);
@@ -281,7 +290,7 @@ traceID = get_new(goId0, "Trace", "S(3,3)", "X Axis", "Y Axis");
 ddWinId = get_new(ddsId, "Window");
 	set(ddWinId, "Object", ddoId);
 	set(ddWinId, "CurrentPage", 449300931);
-	set(ddWinId, "PageViewRect_449300931", list(0, 6051, 11632, 0));
+	set(ddWinId, "PageViewRect_449300931", list(-3, 6053, 11633, 0));
 	set(ddWinId, "Frame", list(38, 38, 1536, 824));
 	set(ddWinId, "ForegroundColor", 0);
 	set(ddWinId, "BackgroundColor", 8);

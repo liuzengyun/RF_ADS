@@ -1,4 +1,4 @@
-<ADSWorkspace Revision="27" Version="100">
+<ADSWorkspace Revision="41" Version="100">
     <Workspace Name="">
         <LibraryDefs Name="lib.defs" />
         <ConfigFile Name="de_sim.cfg" />
@@ -98,6 +98,14 @@
             <Data_Display Name="m2-2.dds" />
             <Cell Name="lzytest1_lib:t2-1-1" />
             <Data_Display Name="t2-1-1.dds" />
+            <Cell Name="lzytest1_lib:t2-1-2" />
+            <Data_Display Name="t2-1-2.dds" />
+            <Cell Name="lzytest1_lib:t2-2" />
+            <Data_Display Name="t2-2.dds" />
+            <Cell Name="lzytest1_lib:t2-3" />
+            <Data_Display Name="t2-3.dds" />
+            <Cell Name="lzytest1_lib:t2-4" />
+            <Data_Display Name="t2-4.dds" />
         </Folder>
         <Folder Name="000 每次实验在一个文件夹，m开头代表老师讲的示例，t开头对应每次实验内容" />
         <Dataset Name="m2_1.ds" />
@@ -113,5 +121,40 @@
         <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d1#2d1_schematic\annotation_map.xml" />
         <Data_Files Name="t2_1_1.ds" />
         <Data_Files Name="t2_1_1_data\logFile.txt" />
+        <Dataset Name="t2_1_2.ds" />
+        <Dataset Name="t2_3.ds" />
+        <Dataset Name="t2_4.ds" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d1#2d2_schematic\annotation_1.xml" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d1#2d2_schematic\annotation_map.xml" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d4_schematic\annotation_1.xml" />
+        <Data_Files Name="dc_annotation\lzytest1_lib_t2#2d4_schematic\annotation_map.xml" />
+        <Data_Files Name="t2_1_2.ds" />
+        <Data_Files Name="t2_1_2_data\logFile.txt" />
+        <Data_Files Name="t2_3.ds" />
+        <Data_Files Name="t2_3_data\logFile.txt" />
+        <Data_Files Name="t2_4.ds" />
+        <Data_Files Name="t2_4_data\logFile.txt" />
+        <Data_Display Name="m3-1.dds" />
+        <Dataset Name="m3_1.ds" />
+        <Data_Files Name="m3_1.ds" />
+        <Data_Files Name="m3_1_data\logFile.txt" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch1_m3-1" />
+        <Cell Name="lzytest1_lib:m3-1" />
+        <Cell Name="lzytest1_lib:t3-1" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch_t3-1" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch1_t3-1" />
+        <Dataset Name="t3_1.ds" />
+        <Data_Files Name="t3_1.ds" />
+        <Data_Files Name="t3_1_data\logFile.txt" />
+        <Data_Display Name="t3-1.dds" />
+        <Cell Name="lzytest1_lib:t3-2" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch_t3-2" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch1_t3-2" />
+        <Dataset Name="t3_2.ds" />
+        <Data_Files Name="t3_2.ds" />
+        <Data_Files Name="t3_2_data\logFile.txt" />
+        <Data_Display Name="t3-2.dds" />
+        <Cell Name="lzytest1_lib:DA_SmithChartMatch_t3-3" />
+        <Cell Name="lzytest1_lib:t3-3-1" />
     </Workspace>
 </ADSWorkspace>

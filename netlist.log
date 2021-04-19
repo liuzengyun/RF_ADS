@@ -1,14 +1,26 @@
-; Top Design: "lzytest1_lib:t2-3:schematic"
+; Top Design: "lzytest1_lib:t3-3-1:schematic"
 ; Netlisted using Hierarchy Policy: "Standard"
 
-Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="lzytest1_lib:t2-3:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
-Port:Term1  N__1 0 Num=1 Z=50 Ohm Noise=yes 
-TLIN:TL1  N__1 N__3 Z=223.60679775 Ohm E=90 F=2 GHz 
-R:R1  N__3 0 R=1000 Ohm Noise=yes 
-S_Param:SP1 CalcS=yes CalcY=no CalcZ=yes GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="lzytest1_lib:t3-3-1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: lzytest1_lib
+; Cell Name: DA_SmithChartMatch1_t3-3-1
+; View Name: schematic
+define "DA_SmithChartMatch1_t3-3-1" ( P1  P2 ) 
+parameters  Fp=1 GHz  SourceType=0  SourceEnable=0  Rg=50 Ohm  Lg=1 nH  Cg=1 pF  Zg=(50+j*50) Ohm  SourceFile="ZSource.s1p"  SourceImpType=0  LoadType=5  LoadEnable=0  RL=50 Ohm  LL=1 nH  CL=1 pF  ZL=(100-j*100) Ohm  LoadFile="ZLoad.s1p"  LoadImpType=0  Z0=50 Ohm 
+TLIN:TL4  N__3 0 Z=50 Ohm E=16.51 F=2.4 GHz 
+TLIN:TL3  N__5 N__3 Z=50 Ohm E=135.0 F=2.4 GHz 
+TLIN:TL2  N__5 0 Z=50 Ohm E=24.20 F=2.4 GHz 
+TLIN:TL1  P1 N__5 Z=50 Ohm E=135.0 F=2.4 GHz 
+TLIN:TL5  N__3 P2 Z=50 Ohm E=45.00 F=2.4 GHz 
+end "DA_SmithChartMatch1_t3-3-1"
+
+"DA_SmithChartMatch1_t3-3-1":DA_SmithChartMatch1  N__4 N__3 Fp=2.4 GHz SourceType=0 SourceEnable=0 Rg=50 Ohm Lg=1 nH Cg=1 pF Zg=(50+j*50) Ohm SourceFile="ZSource.snp" SourceImpType=0 LoadType=1 LoadEnable=0 RL=50 Ohm LL=1 nH CL=1 pF ZL=(100-j*100) Ohm LoadFile="ZLoad.snp" LoadImpType=0 Z0=50 Ohm 
+
+;#@# autodisplay="S_Params_Quad_dB_Smith"
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
 SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
 
-SweepPlan: SP1_stim Start=0 GHz Stop=6 GHz Step=100 MHz 
+SweepPlan: SP1_stim Start=1 GHz Stop=4 GHz Step=10 MHz 
 
 OutputPlan:SP1_Output \
       Type="Output" \
@@ -19,3 +31,5 @@ OutputPlan:SP1_Output \
 
 #load "python","LinearCollapse"
 Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+Port:Term1  N__4 0 Num=1 Z=50 Noise=yes 
+Port:Term2  N__3 0 Num=2 Z=100-j*100 Noise=yes 

@@ -93,10 +93,10 @@ checkUnconnectedPin 1
 checkNodalMismatch 0
 checkWiresInLayout 0
 checkPinVsPort 0
-showConnectedSchem 0
-showConnectedLay 0
+showConnectedSchem 1
+showConnectedLay 1
 showFixedSchem 0
-showFixedLay 0
+showFixedLay 1
 undoEditCount 100
 stepRepeatXspace 5.000000
 stepRepeatYspace 5.000000
@@ -121,7 +121,7 @@ coordEntryPopup 0
 dispSubnetInstNames 0
 swapKeepInstName 1
 tuneSimMode 2
-tuneRestoreDDS 1
+tuneRestoreDDS 0
 tuneRange 50.000000
 tuneStepSize 10.000000
 tuneScale 0
@@ -135,7 +135,7 @@ textOrigin 0
 minPixelDisplaySize 4
 rerouteTraces 0
 prefVersion 1
-genericArtworkSize 4.000000
+genericArtworkSize 40.000000
 plotLessThanMinPixels 1
 plotDepthForLessThanMinPixels 2
 newRouteAroundInstText 0
@@ -159,7 +159,7 @@ physicalConnHighlightColor 4
 logicalConnHighlightColor 35
 physicalConnDifferentNetHighlightColor 78
 plotSymbPinAnnot 0
-wrkLayoutPrfIsUninitialized 1
+wrkLayoutPrfIsUninitialized 0
 pathWidth 25.000000
 pathRadius 2.000000
 textHeight 10.000000
@@ -170,14 +170,14 @@ instTextHeight 10.000000
 gridSnapX 5.000000
 gridSnapY 5.000000
 tapLength 25.000000
-portSize 4.000000
+portSize 40.000000
 minVertexDistance 0.000000
 unitsFreq 0
 unitsRes 1
 unitsCond 4
 unitsInd 5
 unitsCap 5
-unitsLng 6
+unitsLng 1
 unitsTime 5
 unitsAng 0
 unitsPower 4

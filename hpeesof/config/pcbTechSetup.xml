@@ -1,0 +1,46 @@
+<!DOCTYPE PCBTechSetupSaver>
+<PCBTechSetupData>
+    <Units>mil</Units>
+    <Resolution>1000</Resolution>
+    <NumMetalLayers>4</NumMetalLayers>
+    <CenterMaterialIsCore>true</CenterMaterialIsCore>
+    <IncludeSolder>false</IncludeSolder>
+    <HasTopCover>false</HasTopCover>
+    <HasBottomCover>false</HasBottomCover>
+    <TopCoverHeight>1000 mil</TopCoverHeight>
+    <BottomCoverHeight>1000 mil</BottomCoverHeight>
+    <CoreMaterial>
+        <TechMaterialName>FR_4_Core</TechMaterialName>
+        <TechMaterialThickness>28.0 mil</TechMaterialThickness>
+        <TechMaterialIsCore>true</TechMaterialIsCore>
+    </CoreMaterial>
+    <PrepregMaterial>
+        <TechMaterialName>FR_4_Prepreg</TechMaterialName>
+        <TechMaterialThickness>14.0 mil</TechMaterialThickness>
+        <TechMaterialIsCore>false</TechMaterialIsCore>
+    </PrepregMaterial>
+    <SolderMaskMaterial>
+        <TechMaterialName>SolderMask</TechMaterialName>
+        <TechMaterialThickness>2.0 mil</TechMaterialThickness>
+        <TechMaterialIsCore>false</TechMaterialIsCore>
+    </SolderMaskMaterial>
+    <OuterMetalMaterial>
+        <TechMaterialName>Copper</TechMaterialName>
+        <TechMaterialThickness>0.5 mil</TechMaterialThickness>
+        <TechMaterialIsCore>false</TechMaterialIsCore>
+    </OuterMetalMaterial>
+    <InnerMetalMaterial>
+        <TechMaterialName>Copper</TechMaterialName>
+        <TechMaterialThickness>1.0 mil</TechMaterialThickness>
+        <TechMaterialIsCore>false</TechMaterialIsCore>
+    </InnerMetalMaterial>
+    <SolderPasteMaterial>
+        <TechMaterialName>Typical_solder</TechMaterialName>
+        <TechMaterialThickness>1.0 mil</TechMaterialThickness>
+        <TechMaterialIsCore>false</TechMaterialIsCore>
+    </SolderPasteMaterial>
+    <MakeEMStyleStackableDrills>false</MakeEMStyleStackableDrills>
+    <DefaultViaTemplateName>round</DefaultViaTemplateName>
+    <DefaultViaPadDiameter>50 mil</DefaultViaPadDiameter>
+    <DefaultViaDrillDiameter>15 mil</DefaultViaDrillDiameter>
+</PCBTechSetupData>

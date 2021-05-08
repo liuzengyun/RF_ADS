@@ -1,0 +1,45 @@
+create_constant_form("GC331AD72W103KX01","0:GC331AD72W103KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GC331AD72W103KX01");
+create_constant_form("GC331BD72J103KX01","1:GC331BD72J103KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 630[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GC331BD72J103KX01");
+create_constant_form("GC331AD72W153KX01","2:GC331AD72W153KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GC331AD72W153KX01");
+create_constant_form("GC331CD72J153KX03","3:GC331CD72J153KX03, 200V and over/ Automotive, X7T(-55to125[deg]), 630[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GC331CD72J153KX03");
+create_constant_form("GC331BD72W223KX01","4:GC331BD72W223KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GC331BD72W223KX01");
+create_constant_form("GC331AD72E333KX01","5:GC331AD72E333KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 250[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GC331AD72E333KX01");
+create_constant_form("GC331BD72W333KX01","6:GC331BD72W333KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GC331BD72W333KX01");
+create_constant_form("GC331BD72E473KX01","7:GC331BD72E473KX01, 200V and over/ Automotive, X7T(-55to125[deg]), 250[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GC331BD72E473KX01");
+create_constant_form("GC331CD72W473KX03","8:GC331CD72W473KX03, 200V and over/ Automotive, X7T(-55to125[deg]), 450[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:8",68,"8","GC331CD72W473KX03");
+create_constant_form("GC331CD72E683KX03","9:GC331CD72E683KX03, 200V and over/ Automotive, X7T(-55to125[deg]), 250[V], 68000[pF], +/-10[%], 100[kHz]-3[GHz]:9",68,"9","GC331CD72E683KX03");
+
+create_form_set("GC331_list" 
+,"GC331AD72W103KX01"
+,"GC331BD72J103KX01"
+,"GC331AD72W153KX01"
+,"GC331CD72J153KX03"
+,"GC331BD72W223KX01"
+,"GC331AD72E333KX01"
+,"GC331BD72W333KX01"
+,"GC331BD72E473KX01"
+,"GC331CD72W473KX03"
+,"GC331CD72E683KX03"
+);
+
+create_compound_form("GC331_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GC331_list",-1,prm("GC331AD72W103KX01")),
+create_parm("MIN","Minimum",32,"GC331_list",-1,prm("GC331AD72W103KX01")),
+create_parm("MAX","Maximum",32,"GC331_list",-1,prm("GC331CD72E683KX03")));
+
+create_form_set("GC331_list_opt","NULL" 
+,"GC331AD72W103KX01"
+,"GC331BD72J103KX01"
+,"GC331AD72W153KX01"
+,"GC331CD72J153KX03"
+,"GC331BD72W223KX01"
+,"GC331AD72E333KX01"
+,"GC331BD72W333KX01"
+,"GC331BD72E473KX01"
+,"GC331CD72W473KX03"
+,"GC331CD72E683KX03"
+,"GC331_compound"
+);
+
+
+

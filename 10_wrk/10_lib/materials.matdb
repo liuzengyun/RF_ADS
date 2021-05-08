@@ -1,0 +1,13 @@
+<!DOCTYPE Materials>
+<Materials>
+    <Conductors>
+        <Conductor parmtype="1" imag="" name="cond" real="5.8e+07 Siemens/m"/>
+    </Conductors>
+    <Dielectrics>
+        <Dielectric loss_type="1" mur_real="1" lowfreq="1 KHz" valuefreq="1 GHz" er_imag="" highfreq="1 THz" er_loss="" name="Alumina" er_real="9.6" mur_imag=""/>
+        <Dielectric loss_type="0" mur_real="1" lowfreq="" valuefreq="" er_imag="" highfreq="" er_loss="0" name="AIR" er_real="1" mur_imag="0"/>
+        <Dielectric loss_type="0" mur_real="1" lowfreq="" valuefreq="" er_imag="" highfreq="" er_loss="0.015" name="Subst_1" er_real="4.2" mur_imag="0"/>
+    </Dielectrics>
+    <Semiconductors/>
+    <roughness/>
+</Materials>

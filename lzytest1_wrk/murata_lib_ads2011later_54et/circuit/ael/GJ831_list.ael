@@ -1,0 +1,24 @@
+create_constant_form("GJ831CC81E105KA01","0:GJ831CC81E105KA01, General Purpose, X6S(-55to105[deg]), 25[V], 1000000[pF], +/-10[%], 100[Hz]-6[GHz]:0",68,"0","GJ831CC81E105KA01");
+create_constant_form("GJ831CR71H475KA12","1:GJ831CR71H475KA12, General Purpose, X7R(-55to125[deg]), 50[V], 4700000[pF], +/-10[%], 100[Hz]-6[GHz]:1",68,"1","GJ831CR71H475KA12");
+create_constant_form("GJ831CR61E106KE83","2:GJ831CR61E106KE83, General Purpose, X5R(-55to85[deg]), 25[V], 10000000[pF], +/-10[%], 100[Hz]-6[GHz]:2",68,"2","GJ831CR61E106KE83");
+
+create_form_set("GJ831_list" 
+,"GJ831CC81E105KA01"
+,"GJ831CR71H475KA12"
+,"GJ831CR61E106KE83"
+);
+
+create_compound_form("GJ831_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GJ831_list",-1,prm("GJ831CC81E105KA01")),
+create_parm("MIN","Minimum",32,"GJ831_list",-1,prm("GJ831CC81E105KA01")),
+create_parm("MAX","Maximum",32,"GJ831_list",-1,prm("GJ831CR61E106KE83")));
+
+create_form_set("GJ831_list_opt","NULL" 
+,"GJ831CC81E105KA01"
+,"GJ831CR71H475KA12"
+,"GJ831CR61E106KE83"
+,"GJ831_compound"
+);
+
+
+

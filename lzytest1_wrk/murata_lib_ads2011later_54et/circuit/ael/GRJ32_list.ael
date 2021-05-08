@@ -1,0 +1,48 @@
+create_constant_form("GRJ32QR73A682KWJ1","0:GRJ32QR73A682KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 1000[V], 6800[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GRJ32QR73A682KWJ1");
+create_constant_form("GRJ32QR73A103KWJ1","1:GRJ32QR73A103KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 1000[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GRJ32QR73A103KWJ1");
+create_constant_form("GRJ32DR73A153KWJ1","2:GRJ32DR73A153KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 1000[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GRJ32DR73A153KWJ1");
+create_constant_form("GRJ32QR72J223KWJ1","3:GRJ32QR72J223KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 630[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GRJ32QR72J223KWJ1");
+create_constant_form("GRJ32DR73A223KWJ1","4:GRJ32DR73A223KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 1000[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GRJ32DR73A223KWJ1");
+create_constant_form("GRJ32DR72J333KWJ1","5:GRJ32DR72J333KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 630[V], 33000[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GRJ32DR72J333KWJ1");
+create_constant_form("GRJ32DR72J473KWJ1","6:GRJ32DR72J473KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 630[V], 47000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GRJ32DR72J473KWJ1");
+create_constant_form("GRJ32QR72E683KWJ1","7:GRJ32QR72E683KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 68000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GRJ32QR72E683KWJ1");
+create_constant_form("GRJ32DR72E104KWJ1","8:GRJ32DR72E104KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 100000[pF], +/-10[%], 100[kHz]-3[GHz]:8",68,"8","GRJ32DR72E104KWJ1");
+create_constant_form("GRJ32QR72E154KWJ1","9:GRJ32QR72E154KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 150000[pF], +/-10[%], 100[kHz]-3[GHz]:9",68,"9","GRJ32QR72E154KWJ1");
+create_constant_form("GRJ32DR72E224KWJ1","10:GRJ32DR72E224KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 220000[pF], +/-10[%], 100[kHz]-3[GHz]:10",68,"10","GRJ32DR72E224KWJ1");
+
+create_form_set("GRJ32_list" 
+,"GRJ32QR73A682KWJ1"
+,"GRJ32QR73A103KWJ1"
+,"GRJ32DR73A153KWJ1"
+,"GRJ32QR72J223KWJ1"
+,"GRJ32DR73A223KWJ1"
+,"GRJ32DR72J333KWJ1"
+,"GRJ32DR72J473KWJ1"
+,"GRJ32QR72E683KWJ1"
+,"GRJ32DR72E104KWJ1"
+,"GRJ32QR72E154KWJ1"
+,"GRJ32DR72E224KWJ1"
+);
+
+create_compound_form("GRJ32_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GRJ32_list",-1,prm("GRJ32QR73A682KWJ1")),
+create_parm("MIN","Minimum",32,"GRJ32_list",-1,prm("GRJ32QR73A682KWJ1")),
+create_parm("MAX","Maximum",32,"GRJ32_list",-1,prm("GRJ32DR72E224KWJ1")));
+
+create_form_set("GRJ32_list_opt","NULL" 
+,"GRJ32QR73A682KWJ1"
+,"GRJ32QR73A103KWJ1"
+,"GRJ32DR73A153KWJ1"
+,"GRJ32QR72J223KWJ1"
+,"GRJ32DR73A223KWJ1"
+,"GRJ32DR72J333KWJ1"
+,"GRJ32DR72J473KWJ1"
+,"GRJ32QR72E683KWJ1"
+,"GRJ32DR72E104KWJ1"
+,"GRJ32QR72E154KWJ1"
+,"GRJ32DR72E224KWJ1"
+,"GRJ32_compound"
+);
+
+
+

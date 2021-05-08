@@ -1,0 +1,29 @@
+; Top Design: "10_lib:cell_1:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="10_lib:cell_1:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+MLIN2:TL1  N__0 N__1 Subst="MSub1" W=38.364409 mil L=667.755906 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL2  N__1 N__3 Subst="MSub1" W=141.881496 mil L=82.045669 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL3  N__3 N__5 Subst="MSub1" W=4.096575 mil L=272.175197 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL4  N__5 N__7 Subst="MSub1" W=141.881496 mil L=308.018898 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL5  N__7 N__9 Subst="MSub1" W=4.096575 mil L=371.221260 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL6  N__9 N__11 Subst="MSub1" W=141.881496 mil L=225.277953 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL7  N__11 N__13 Subst="MSub1" W=4.096575 mil L=99.046063 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL8  N__13 N__15 Subst="MSub1" W=38.3644090 mil L=667.755906 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+Port:Term1  N__0 0 Num=1 Z=50 Ohm Noise=yes 
+model MSub1 MSUB H=20.000 mil Er=4.2  Mur=1.0  Cond=5.8e7  Hu=3.9e+34 mil T=1.4 mil TanD=0.015  Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0e9  LowFreqForTanD=1.0e3  HighFreqForTanD=1.0e12  RoughnessModel=2 
+Port:Term2  N__15 0 Num=2 Z=50 Ohm Noise=yes 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=no SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=0 GHz Stop=5 GHz Step=0.01 GHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2

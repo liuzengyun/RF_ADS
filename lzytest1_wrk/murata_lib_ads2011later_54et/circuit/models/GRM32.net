@@ -1,0 +1,215 @@
+;;****************************************************************************
+;; File:        GRM32.net
+;; Description: GRM32 model file
+;; Author:      Agilent Technologies Japan, Ltd. 
+;; Created:     2014.07.09 16:46:27
+;; Language:    ADSsim
+;; (C) Copyright 2005, Agilent Technologies Japan, all rights reserved.
+;;****************************************************************************
+
+
+define GRM32 ( _net1  _net2 ) 
+parameters PartNumber=0
+
+DAC:DAC1  File="$muRataLibWeb_CIRCUIT_MODEL_DIR/GRM32.dat" Type="dscr" InterpMode="index_lookup" InterpDom="ri" ExtrapMode="interpMode" iVar1="INDEX" iVal1=PartNumber
+
+
+M01=file{DAC1, "M01"}
+L01=file{DAC1, "L01"}
+K01=file{DAC1, "K01"}
+M02=file{DAC1, "M02"}
+L02=file{DAC1, "L02"}
+K02=file{DAC1, "K02"}
+M03=file{DAC1, "M03"}
+L03=file{DAC1, "L03"}
+K03=file{DAC1, "K03"}
+M04=file{DAC1, "M04"}
+L04=file{DAC1, "L04"}
+K04=file{DAC1, "K04"}
+M05=file{DAC1, "M05"}
+L05=file{DAC1, "L05"}
+K05=file{DAC1, "K05"}
+M06=file{DAC1, "M06"}
+L06=file{DAC1, "L06"}
+K06=file{DAC1, "K06"}
+M07=file{DAC1, "M07"}
+L07=file{DAC1, "L07"}
+K07=file{DAC1, "K07"}
+M08=file{DAC1, "M08"}
+L08=file{DAC1, "L08"}
+K08=file{DAC1, "K08"}
+M09=file{DAC1, "M09"}
+L09=file{DAC1, "L09"}
+K09=file{DAC1, "K09"}
+M10=file{DAC1, "M10"}
+L10=file{DAC1, "L10"}
+K10=file{DAC1, "K10"}
+M11=file{DAC1, "M11"}
+L11=file{DAC1, "L11"}
+K11=file{DAC1, "K11"}
+M12=file{DAC1, "M12"}
+L12=file{DAC1, "L12"}
+K12=file{DAC1, "K12"}
+M13=file{DAC1, "M13"}
+L13=file{DAC1, "L13"}
+K13=file{DAC1, "K13"}
+M14=file{DAC1, "M14"}
+L14=file{DAC1, "L14"}
+K14=file{DAC1, "K14"}
+M15=file{DAC1, "M15"}
+L15=file{DAC1, "L15"}
+K15=file{DAC1, "K15"}
+M16=file{DAC1, "M16"}
+L16=file{DAC1, "L16"}
+K16=file{DAC1, "K16"}
+M17=file{DAC1, "M17"}
+L17=file{DAC1, "L17"}
+K17=file{DAC1, "K17"}
+M18=file{DAC1, "M18"}
+L18=file{DAC1, "L18"}
+K18=file{DAC1, "K18"}
+
+
+Short:DC_Block1 _net1 _net1aux Mode=1
+Z_Port:Z1P01 _net1aux _net0102 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K01)+(1/(j*2*pi*freq*L01))+(1/M01)) endif
+Z_Port:Z1P02 _net0102 _net0203 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K02)+(1/(j*2*pi*freq*L02))+(1/M02)) endif
+Z_Port:Z1P03 _net0203 _net0304 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K03)+(1/(j*2*pi*freq*L03))+(1/M03)) endif
+Z_Port:Z1P04 _net0304 _net0405 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K04)+(1/(j*2*pi*freq*L04))+(1/M04)) endif
+Z_Port:Z1P05 _net0405 _net0506 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K05)+(1/(j*2*pi*freq*L05))+(1/M05)) endif
+Z_Port:Z1P06 _net0506 _net0607 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K06)+(1/(j*2*pi*freq*L06))+(1/M06)) endif
+Z_Port:Z1P07 _net0607 _net0708 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K07)+(1/(j*2*pi*freq*L07))+(1/M07)) endif
+Z_Port:Z1P08 _net0708 _net0809 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K08)+(1/(j*2*pi*freq*L08))+(1/M08)) endif
+Z_Port:Z1P09 _net0809 _net0910 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K09)+(1/(j*2*pi*freq*L09))+(1/M09)) endif
+Z_Port:Z1P10 _net0910 _net1011 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K10)+(1/(j*2*pi*freq*L10))+(1/M10)) endif
+Z_Port:Z1P11 _net1011 _net1112 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K11)+(1/(j*2*pi*freq*L11))+(1/M11)) endif
+Z_Port:Z1P12 _net1112 _net1213 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K12)+(1/(j*2*pi*freq*L12))+(1/M12)) endif
+Z_Port:Z1P13 _net1213 _net1314 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K13)+(1/(j*2*pi*freq*L13))+(1/M13)) endif
+Z_Port:Z1P14 _net1314 _net1415 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K14)+(1/(j*2*pi*freq*L14))+(1/M14)) endif
+Z_Port:Z1P15 _net1415 _net1516 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K15)+(1/(j*2*pi*freq*L15))+(1/M15)) endif
+Z_Port:Z1P16 _net1516 _net1617 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K16)+(1/(j*2*pi*freq*L16))+(1/M16)) endif
+Z_Port:Z1P17 _net1617 _net1718 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K17)+(1/(j*2*pi*freq*L17))+(1/M17)) endif
+Z_Port:Z1P18 _net1718 _net2 Z[1,1]=if freq==0 then 1e+20 else 1/((j*2*pi*freq*K18)+(1/(j*2*pi*freq*L18))+(1/M18)) endif
+end GRM32
+
+
+;;model information (PartNumber:partName)
+;0 : GRM32A7U3D820JW31
+;1 : GRM32A7U3D101JW31
+;2 : GRM32A7U3D121JW31
+;3 : GRM32A7U3D151JW31
+;4 : GRM32B7U3D181JW31
+;5 : GRM32B7U3D221JW31
+;6 : GRM32A7U2J122JW31
+;7 : GRM32B7U3A122JW31
+;8 : GRM32A7U2H122JW31
+;9 : GRM32A7U2J152JW31
+;10 : GRM32Q7U3A152JW31
+;11 : GRM32A7U2H152JW31
+;12 : GRM32A7U2J182JW31
+;13 : GRM32D7U3A182JW31
+;14 : GRM32A7U2H182JW31
+;15 : GRM32A7U2J222JW31
+;16 : GRM32D7U3A222JW31
+;17 : GRM32A7U2H222JW31
+;18 : GRM32B7U2J562JW31
+;19 : GRM32B7U2H562JW31
+;20 : GRM32Q7U2J682JW31
+;21 : GRM32QR73A682KW01
+;22 : GRM32Q7U2H682JW31
+;23 : GRM32D7U2J822JW31
+;24 : GRM32D7U2H822JW31
+;25 : GRM32D7U2J103JW31
+;26 : GRM32QR73A103KW01
+;27 : GRM32D7U2H103JW31
+;28 : GRM32DR73A153KW01
+;29 : GRM32DR73A223KW01
+;30 : GRM32QR72J223KW01
+;31 : GRM32Q7U2E273JW31
+;32 : GRM32DR72J333KW01
+;33 : GRM32D7U2E333JW31
+;34 : GRM32D7U2E393JW31
+;35 : GRM32DR72J473KW01
+;36 : GRM32D7U2E473JW31
+;37 : GRM32QR72E683KW01
+;38 : GRM32QR72D683KW01
+;39 : GRM32DR72E104KW01
+;40 : GRM32DR72D104KW01
+;41 : GRM32QR72E154KW01
+;42 : GRM32QR72D154KW01
+;43 : GRM32DR72E224KW01
+;44 : GRM32DR72D224KW01
+;45 : GRM32NR71H684KA01
+;46 : GRM32CR72A684KA01
+;47 : GRM32CR72A105KA35
+;48 : GRM32RR71H105KA01
+;49 : GRM32CR72A105MA35
+;50 : GRM32ER72A225KA35
+;51 : GRM32MR71C225KA01
+;52 : GRM32RR71E225KA01
+;53 : GRM32ER72A225MA35
+;54 : GRM32DR71E475KA61
+;55 : GRM32ER71H475KA88
+;56 : GRM32RR61C475KA01
+;57 : GRM32RR71C475KA01
+;58 : GRM32RR61E475KA12
+;59 : GRM32ER71K475KE14
+;60 : GRM32ER71K475ME14
+;61 : GRM32AR61C106KAB7
+;62 : GRM32DR71A106KA01
+;63 : GRM32DR61C106KA01
+;64 : GRM32DR71C106KA01
+;65 : GRM32DC81E106KA12
+;66 : GRM32DR61E106KA12
+;67 : GRM32DR71E106KA12
+;68 : GRM32ER61A106KA01
+;69 : GRM32ER61H106KA12
+;70 : GRM32ER71H106KA12
+;71 : GRM32ER6YA106KA12
+;72 : GRM32ER7YA106KA12
+;73 : GRM32ER61H106MA12
+;74 : GRM32ER71J106KA12
+;75 : GRM32ER71J106MA12
+;76 : GRM32ER6YA106MA12
+;77 : GRM32ER71H106MA12
+;78 : GRM32ER7YA106MA12
+;79 : GRM32DR60J226MA01
+;80 : GRM32ER71A226ME20
+;81 : GRM32ER61C226ME20
+;82 : GRM32ER71C226MEA8
+;83 : GRM32EC81E226KE15
+;84 : GRM32EC81E226ME15
+;85 : GRM32ER61E226KE15
+;86 : GRM32ER61E226ME15
+;87 : GRM32ER71E226ME15
+;88 : GRM32ND70J226ME19
+;89 : GRM32NC81A226ME19
+;90 : GRM32ND71A226KE15
+;91 : GRM32ND71A226ME15
+;92 : GRM32NR61A226KE19
+;93 : GRM32NR61A226ME19
+;94 : GRM32NC81C226KE15
+;95 : GRM32NC81C226ME15
+;96 : GRM32ER71C226KEA8
+;97 : GRM32EC80J476ME64
+;98 : GRM32ER70J476KE20
+;99 : GRM32ER70J476ME20
+;100 : GRM32EC81A476KE19
+;101 : GRM32EC81A476ME19
+;102 : GRM32ED71A476KE15
+;103 : GRM32ED71A476ME15
+;104 : GRM32ER61A476KE20
+;105 : GRM32ER61A476ME20
+;106 : GRM32ER71A476KE15
+;107 : GRM32ER71A476ME15
+;108 : GRM32EC81C476KE15
+;109 : GRM32EC81C476ME15
+;110 : GRM32ER61C476KE15
+;111 : GRM32ER61C476ME15
+;112 : GRM32EC80G107ME20
+;113 : GRM32EE70G107ME19
+;114 : GRM32EC80J107ME20
+;115 : GRM32EE70J107ME15
+;116 : GRM32ER60J107ME20
+;117 : GRM32ER61A107ME20
+
+

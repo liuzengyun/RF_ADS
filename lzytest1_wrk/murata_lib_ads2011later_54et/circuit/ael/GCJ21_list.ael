@@ -1,0 +1,42 @@
+create_constant_form("GCJ21AR72E102KXJ1","0:GCJ21AR72E102KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 1000[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GCJ21AR72E102KXJ1");
+create_constant_form("GCJ21AR72E152KXJ1","1:GCJ21AR72E152KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 1500[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GCJ21AR72E152KXJ1");
+create_constant_form("GCJ21AR72E222KXJ1","2:GCJ21AR72E222KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 2200[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GCJ21AR72E222KXJ1");
+create_constant_form("GCJ21AR72E332KXJ1","3:GCJ21AR72E332KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 3300[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GCJ21AR72E332KXJ1");
+create_constant_form("GCJ21AR72E472KXJ1","4:GCJ21AR72E472KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 4700[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GCJ21AR72E472KXJ1");
+create_constant_form("GCJ21AR72E682KXJ1","5:GCJ21AR72E682KXJ1, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 6800[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GCJ21AR72E682KXJ1");
+create_constant_form("GCJ21BR72E103KXJ3","6:GCJ21BR72E103KXJ3, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GCJ21BR72E103KXJ3");
+create_constant_form("GCJ21BR72E153KXJ3","7:GCJ21BR72E153KXJ3, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GCJ21BR72E153KXJ3");
+create_constant_form("GCJ21BR72E223KXJ3","8:GCJ21BR72E223KXJ3, 200V and over/ Automotive, X7R(-55to125[deg]), 250[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:8",68,"8","GCJ21BR72E223KXJ3");
+
+create_form_set("GCJ21_list" 
+,"GCJ21AR72E102KXJ1"
+,"GCJ21AR72E152KXJ1"
+,"GCJ21AR72E222KXJ1"
+,"GCJ21AR72E332KXJ1"
+,"GCJ21AR72E472KXJ1"
+,"GCJ21AR72E682KXJ1"
+,"GCJ21BR72E103KXJ3"
+,"GCJ21BR72E153KXJ3"
+,"GCJ21BR72E223KXJ3"
+);
+
+create_compound_form("GCJ21_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GCJ21_list",-1,prm("GCJ21AR72E102KXJ1")),
+create_parm("MIN","Minimum",32,"GCJ21_list",-1,prm("GCJ21AR72E102KXJ1")),
+create_parm("MAX","Maximum",32,"GCJ21_list",-1,prm("GCJ21BR72E223KXJ3")));
+
+create_form_set("GCJ21_list_opt","NULL" 
+,"GCJ21AR72E102KXJ1"
+,"GCJ21AR72E152KXJ1"
+,"GCJ21AR72E222KXJ1"
+,"GCJ21AR72E332KXJ1"
+,"GCJ21AR72E472KXJ1"
+,"GCJ21AR72E682KXJ1"
+,"GCJ21BR72E103KXJ3"
+,"GCJ21BR72E153KXJ3"
+,"GCJ21BR72E223KXJ3"
+,"GCJ21_compound"
+);
+
+
+

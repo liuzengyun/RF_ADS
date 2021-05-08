@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dc_annotation_options>
+ <options cell="cell_2" ToggleVoltage="true" library="Five_lib" ToggleCurrent="true" view="schematic"/>
+ <options cell="t5-2" ToggleVoltage="false" library="Five_lib" ToggleCurrent="false" view="schematic"/>
+ <options cell="cell_1" ToggleVoltage="true" library="Five_lib" ToggleCurrent="true" view="schematic"/>
+</dc_annotation_options>

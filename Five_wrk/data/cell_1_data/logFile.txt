@@ -1,0 +1,15 @@
+
+hpeesofsim (*) 510.shp Jul 22 2019, MINT version 5
+    (64-bit windows built: Mon Jul 22, 2019 22:53:59 +0000)
+
+
+DC DC1[1] <Five_lib:cell_1:schematic>  
+.Pt DC convergence is used.
+
+.
+
+DC convergence achieved in 68 iterations.
+
+Resource usage:
+  Total stopwatch time     =     0.59 seconds.
+

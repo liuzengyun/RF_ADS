@@ -1,0 +1,15 @@
+PROJECT_VERSION=1000
+DETECH_PROJ_TECH_FILE_DEFAULT=ADS,mil
+DETECH_PROJ_TECH_FILE_HISTORY=ADS,mil;
+SYSTEM_CUSTOM_CIRCUIT_SYMBOLS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS};{$HPEESOF_DIR}\custom\{%PROJECT1}\symbols
+SYSTEM_CUSTOM_CIRCUIT_DESIGNS={%DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS};{$HPEESOF_DIR}\custom\{%PROJECT1}\designs
+VIA_CONFIG_PATH={%DESIGN_KIT_VIA_CONFIG_PATH};.:{%PROJECT_SEARCH_PATH}:{$HOME}\hpeesof\de\defaults:{$HPEESOF_DIR}\de\defaults:{%DESIGN_KIT_VIA_CONFIG_PATH}:{%USER_VIA_CONFIG_PATH}
+LAST_LIBRARY_SELECTED=Five_lib
+SCHEM_FILE_OPEN_HISTORY_1=Five_lib:cell_1:schematic
+SCHEM_FILE_OPEN_HISTORY_2=Five_lib:cell_4:schematic
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_SYMBOLS=C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\symbols;C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\symbols
+DESIGN_KIT_DATA_FILES=C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\data;C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\models
+DESIGN_KIT_SYSTEM_CUSTOM_CIRCUIT_DESIGNS=C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\artwork;C:\Users\pub\Five_wrk\murata_lib_ads2011later_54et\circuit\artwork
+SCHEM_FILE_OPEN_HISTORY_3=Five_lib:cell_3:schematic
+SCHEM_FILE_OPEN_HISTORY_4=Five_lib:cell_2:schematic
+LAYOUT_FILE_OPEN_HISTORY_1=Five_lib:cell_1:layout

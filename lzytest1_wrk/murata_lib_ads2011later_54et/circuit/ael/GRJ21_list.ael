@@ -1,0 +1,42 @@
+create_constant_form("GRJ21AR72E102KWJ1","0:GRJ21AR72E102KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 1000[pF], +/-10[%], 100[kHz]-3[GHz]:0",68,"0","GRJ21AR72E102KWJ1");
+create_constant_form("GRJ21AR72E152KWJ1","1:GRJ21AR72E152KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 1500[pF], +/-10[%], 100[kHz]-3[GHz]:1",68,"1","GRJ21AR72E152KWJ1");
+create_constant_form("GRJ21AR72E222KWJ1","2:GRJ21AR72E222KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 2200[pF], +/-10[%], 100[kHz]-3[GHz]:2",68,"2","GRJ21AR72E222KWJ1");
+create_constant_form("GRJ21AR72E332KWJ1","3:GRJ21AR72E332KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 3300[pF], +/-10[%], 100[kHz]-3[GHz]:3",68,"3","GRJ21AR72E332KWJ1");
+create_constant_form("GRJ21AR72E472KWJ1","4:GRJ21AR72E472KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 4700[pF], +/-10[%], 100[kHz]-3[GHz]:4",68,"4","GRJ21AR72E472KWJ1");
+create_constant_form("GRJ21AR72E682KWJ1","5:GRJ21AR72E682KWJ1, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 6800[pF], +/-10[%], 100[kHz]-3[GHz]:5",68,"5","GRJ21AR72E682KWJ1");
+create_constant_form("GRJ21BR72E103KWJ3","6:GRJ21BR72E103KWJ3, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 10000[pF], +/-10[%], 100[kHz]-3[GHz]:6",68,"6","GRJ21BR72E103KWJ3");
+create_constant_form("GRJ21BR72E153KWJ3","7:GRJ21BR72E153KWJ3, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 15000[pF], +/-10[%], 100[kHz]-3[GHz]:7",68,"7","GRJ21BR72E153KWJ3");
+create_constant_form("GRJ21BR72E223KWJ3","8:GRJ21BR72E223KWJ3, 200V and over/ General Purpose, X7R(-55to125[deg]), 250[V], 22000[pF], +/-10[%], 100[kHz]-3[GHz]:8",68,"8","GRJ21BR72E223KWJ3");
+
+create_form_set("GRJ21_list" 
+,"GRJ21AR72E102KWJ1"
+,"GRJ21AR72E152KWJ1"
+,"GRJ21AR72E222KWJ1"
+,"GRJ21AR72E332KWJ1"
+,"GRJ21AR72E472KWJ1"
+,"GRJ21AR72E682KWJ1"
+,"GRJ21BR72E103KWJ3"
+,"GRJ21BR72E153KWJ3"
+,"GRJ21BR72E223KWJ3"
+);
+
+create_compound_form("GRJ21_compound","Discrete Optimize setting","DistLibForm",68,"%p opt{ discrete %1p to %2p by 1 }","%s, %1s to %2s",
+create_parm("NOM","Nominal",32,"GRJ21_list",-1,prm("GRJ21AR72E102KWJ1")),
+create_parm("MIN","Minimum",32,"GRJ21_list",-1,prm("GRJ21AR72E102KWJ1")),
+create_parm("MAX","Maximum",32,"GRJ21_list",-1,prm("GRJ21BR72E223KWJ3")));
+
+create_form_set("GRJ21_list_opt","NULL" 
+,"GRJ21AR72E102KWJ1"
+,"GRJ21AR72E152KWJ1"
+,"GRJ21AR72E222KWJ1"
+,"GRJ21AR72E332KWJ1"
+,"GRJ21AR72E472KWJ1"
+,"GRJ21AR72E682KWJ1"
+,"GRJ21BR72E103KWJ3"
+,"GRJ21BR72E153KWJ3"
+,"GRJ21BR72E223KWJ3"
+,"GRJ21_compound"
+);
+
+
+

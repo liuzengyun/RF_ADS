@@ -1,0 +1,5 @@
+INCLUDE $HPEESOF_DIR/oalibs/analog_rf.defs
+INCLUDE $HPEESOF_DIR/oalibs/dsp.defs
+DEFINE Five_lib Five_lib
+ASSIGN Five_lib libMode shared
+INCLUDE $HOME/Five_wrk/murata_lib_ads2011later_54et/lib.defs

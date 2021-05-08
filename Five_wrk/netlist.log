@@ -1,0 +1,158 @@
+; Top Design: "Five_lib:t7-test:schematic"
+; Netlisted using Hierarchy Policy: "Standard"
+
+Options ResourceUsage=yes UseNutmegFormat=no EnableOptim=no TopDesignName="Five_lib:t7-test:schematic" DcopOutputNodeVoltages=yes DcopOutputPinCurrents=yes DcopOutputAllSweepPoints=no DcopOutputDcopType=0
+; Library Name: Five_lib
+; Cell Name: ATF54143_dt
+; View Name: schematic
+define ATF54143_dt ( N__16  N__2  N__3  N__8 ) 
+;parameters 
+C:C1  N__0 N__1 C=0.10 pF 
+
+K=5
+"MESFETM1":FET1  N__11 N__7 N__12 Noise=yes 
+L:L12  N__12 N__5 L=0.15 nH R=0.001 Noise=yes  
+L:L11  N__13 N__12 L=0.15 nH R=0.001 Noise=yes  
+model MESFETM1 GaAs NFET=1 PFET=0 Idsmod=1 Vto=0.3 Beta=0.9 Lambda=82e-3 Alpha=13 Tnom=16.85 Ucrit=-0.72 Vgexp=2.45 Gamds=1e-4 Rgs=0.25 Ohm Gscap=2 Cgs=2.8 pF Cgd=0.02 pF Gdcap=2 Fc=0.65 Rgd=0.025 Ohm Rd=0.01 Ohm Rg=1.0 Ohm Rs=0.03 Ohm Lg=0.018 nH Cds=0.08 pF Rc=214 Ohm Crf=0.38 fF Vbi=0.8 Fnc=1 MHz R=0.08 P=0.1 C=0.05 Taumdl=0 
+TLINP:TL19  N__16 N__15 Z=5. Ohm L=3 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+L:L9  N__0 N__7 L=0.7 nH R=0.001 Noise=yes  
+TLINP:TL16  N__15 N__0 Z=13.6 Ohm L=3.0 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL20  N__2 N__14 Z=50 Ohm L=5. mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL18  N__14 N__13 Z=80 Ohm L=10 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+L:L10  N__11 N__10 L=1.0 nH R=0.001 Noise=yes  
+TLINP:TL13  N__10 N__9 Z=42 Ohm L=3 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL21  N__9 N__3 Z=43 Ohm L=5 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL17  N__5 N__4 Z=80 Ohm L=10 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL22  N__4 N__8 Z=50 Ohm L=5 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL24  N__13 N__1 Z=143 Ohm L=6 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL25  N__1 N__6 Z=36 Ohm L=1 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+TLINP:TL23  N__6 N__5 Z=107 Ohm L=5.5 mil K=K A=0.000 F=1 GHz TanD=0.001 Mur=1 TanM=0 Sigma=0 DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz 
+C:C2  N__10 N__6 C=0.13 pF 
+C:C3  N__11 N__7 C=0.18 pF 
+end ATF54143_dt
+
+
+#ifndef muRataLibWeb
+#define muRataLibWeb
+; models
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQW18AN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQW15AN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQW04AN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP15MN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP03TN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP03TG.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP03PN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP02TQ.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQP02TN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQG18HN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQG15HS.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQG15HN.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LQG15HH.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLR18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLL31.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLL21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLL1U.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLL18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/LLL15.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM55.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM43.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM42.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM32.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM31.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM15.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM03.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRM02.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRJ55.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRJ43.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRJ32.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRJ31.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GRJ21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR731.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR721.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR455.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR443.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR442.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR355.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR343.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR332.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR331.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GR321.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GQM22.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GQM21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GQM18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJM15.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJM03.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJM02.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJ832.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJ831.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJ821.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GJ431.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM55.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM43.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM32.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM31.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM15.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCM03.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCJ55.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCJ43.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCJ32.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCJ31.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCJ21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCD21.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GCD18.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GC355.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GC343.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GC332.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GC331.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GC321.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA355.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA352.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA343.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA342.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA255.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA243.net"
+#include "D:/ads/Users/lance/Five_wrk/murata_lib_ads2011later_54et/circuit/models/GA242.net"
+#endif
+
+
+V_Source:SRC1  N__7 0 Type="V_DC" Vdc=5 V SaveCurrent=1 
+ATF54143_dt:X1  N__4 N__11 N__9 N__3 
+GRM02:C2  N__13 N__4 PartNumber=345 
+GRM02:C4  N__9 N__18 PartNumber=345 
+GRM02:C1  0 N__2 PartNumber=345 
+GRM02:C3  0 N__8 PartNumber=345 
+MLSC2:TL1  N__11 Subst="MSub1" W=38.359134 mil L=52.076772 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLSC2:TL2  N__3 Subst="MSub1" W=38.359134 mil L=52.076772 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+R:R3  N__7 N__8 R=33 Noise=yes 
+R:R2  N__2 N__7 R=620 Ohm Noise=yes 
+R:R1  0 N__2 R=82 Ohm Noise=yes 
+S_Param:SP1 CalcS=yes CalcY=no CalcZ=no GroupDelayAperture=1e-4 FreqConversion=no FreqConversionPort=1 StatusLevel=2 CalcNoise=yes SortNoise=0 BandwidthForNoise=1.0 Hz DevOpPtLevel=0 \
+SweepVar="freq" SweepPlan="SP1_stim" OutputPlan="SP1_Output" 
+
+SweepPlan: SP1_stim Start=2.4 GHz Stop=2.5 GHz Step=1 MHz 
+
+OutputPlan:SP1_Output \
+      Type="Output" \
+      UseEquationNestLevel=yes \
+      EquationNestLevel=2 \
+      UseSavedEquationNestLevel=yes \
+      SavedEquationNestLevel=2
+
+#load "python","LinearCollapse"
+Component Module="LinearCollapse" Type="ModelExtractor" NetworkRepresentation=2
+LQG15HH:L3  N__2 N__4 PartNumber=38 
+LQG15HH:L4  N__8 N__9 PartNumber=38 
+model MSub1 MSUB H=20.0 mil Er=4.2 Mur=1 Cond=5.8E7 Hu=3.9e+034 mil T=1.4 mil TanD=0.015 Rough=0 mil DielectricLossModel=1 FreqForEpsrTanD=1.0 GHz LowFreqForTanD=1.0 kHz HighFreqForTanD=1.0 THz RoughnessModel=2 
+aele GaCircle1=ga_circle(S,,51,8,0.1);
+aele NsCircle1=ns_circle(,NFmin,Sopt,Rn/50,51,8,0.1);
+aele Zin1=zin(S22,PortZ2);
+Port:Term1  N__15 0 Num=1 Z=50 Ohm Noise=yes 
+Port:Term2  N__0 0 Num=2 Z=50 Ohm Noise=yes 
+MLSC2:TL8  N__0 Subst="MSub1" W=38.359134 mil L=285.944882 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL10  N__18 N__0 Subst="MSub1" W=38.359134 mil L=245.668898 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLOC2:TL7  N__15 Subst="MSub1" W=38.359134 mil L=402.153543 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
+MLIN2:TL9  N__15 N__13 Subst="MSub1" W=38.359134 mil L=165.268110 mil Wall1=1.0E+30 mil Wall2=1.0E+30 mil Mod=1 
